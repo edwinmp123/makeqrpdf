@@ -1,0 +1,8 @@
+class client_info(models.Model):
+    phone=models.CharField(max_length=15)
+    dob=models.DateField(null=True,blank=True,default=None)
+    aadhar=models.CharField(max_length=15)
+    city=models.CharField(max_length=15)
+    address=models.CharField(max_length=15)
+    district=models.CharField(max_length=15)
+    client=models.ForeignKey(client_data,on_delete=models.CASCADE)

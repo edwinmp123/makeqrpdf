@@ -1,0 +1,39 @@
+{%extends 'base.html'%}
+{%block content%}
+<style>
+.a{
+    text-align: center;
+
+
+}
+.d{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+
+    
+    
+} 
+.button{
+    display: flex;
+    font-size: small; 
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+    width: 100px;
+    height: 55px;
+    justify-content: center;
+}
+
+</style>
+<h1 class="a">MELOWE {{client_obj.username}}</h1>
+<button onclick="location.href='logoutclient'"> LOGOUT</button>
+<div class="d">
+<img src="{{client_obj.photo.url}}">
+</div>
+<button class="button"onClick="location.href='clientdata';">
+    Client Dataentry
+</button>
+{% endblock %}

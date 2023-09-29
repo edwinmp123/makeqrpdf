@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Registration Form | CodingLab </title>
+    <link rel="stylesheet" href="{% static 'css/Registration.css'%}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Client Data Entry</div>
+    <div class="content">
+      <form action="clientdata" method="post">
+        {%csrf_token%}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text"name="name" placeholder="Enter your NaMe" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Address</span>
+            <input type="text" name="address" placeholder="Enter your HoUsEnAmE" required>
+          </div>
+          <div class="input-box">
+            <span class="details">District</span>
+            <input type="text" name="district" placeholder="Enter your DiStRiCt" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" name="email" placeholder="Enter your EmAiL" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name="phone"placeholder="Enter your PHNuMbEr" required>
+          </div>
+          <div class="input-box">
+            <span class="details">City</span>
+            <input type="text" name="city" placeholder="Enter your CiTy" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Aadhar Card</span>
+            <input type="text" name="aadhar" placeholder="Enter your AaDhAr NuMbEr" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Birth Date</span>
+            <input type="date" name="dob" placeholder="Enter your DOB" required>
+          </div>
+          
+          <div class="button">
+            <input type="submit" value="Generate QR code & PDF">
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  </html>
